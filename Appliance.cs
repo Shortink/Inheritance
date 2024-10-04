@@ -22,14 +22,42 @@ namespace Inheritance
         public string Color { get => color; set => color = value; }
         public double Price { get => price; set => price = value; }
 
+        public Appliance()
+        {
+            
+        }
+
         public Appliance(long itemNumber, string brand, int quantity, double wattage, string color, double price)
         {
-            this.itemNumber = itemNumber;
-            this.brand = brand;
-            this.quantity = quantity;
-            this.wattage = wattage;
-            this.color = color;
-            this.price = price;
+            this.ItemNumber = itemNumber;
+            this.Brand = brand;
+            this.Quantity = quantity;
+            this.Wattage = wattage;
+            this.Color = color;
+            this.Price = price;
+        }
+
+        public bool IsAvailable()
+        {
+            if (Quantity >= 1)
+            {
+                return true;
+            } else
+            {
+                return false;
+            }
+        }
+
+        public void Checkout()
+        {
+            Console.WriteLine($"Appliance {ItemNumber} has been checked out");
+        }
+
+        public abstract string FileForFormat();
+
+        public override string ToString()
+        {
+            return $"Appliance Information\nItem Number: {ItemNumber}\nBrand: {Brand}\nQuantity: {Quantity}\nWattage: {Wattage}\nPrice: {Price}";
         }
     }
 }

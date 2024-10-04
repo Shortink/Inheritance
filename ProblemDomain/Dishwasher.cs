@@ -20,6 +20,11 @@ namespace Inheritance.ProblemDomain
             this.soundRating = soundRating;
         }
 
+        public override string FileForFormat()
+        {
+            return $"{ItemNumber},{Brand},{Quantity},{Wattage},{Color},{Price},{Feature},{SoundRating}";
+        }
+
         public override string ToString()
         {
             return "placeholder";
