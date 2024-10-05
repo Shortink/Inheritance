@@ -14,6 +14,11 @@ namespace Inheritance.ProblemDomain
         public string Feature { get => feature; set => feature = value; }
         public string SoundRating { get => soundRating; set => soundRating = value; }
 
+        public Dishwasher()
+        {
+
+        }
+
         public Dishwasher(long itemNumber, string brand, int quantity, double wattage, string color, double price, string feature, string soundRating) : base(itemNumber, brand, quantity, wattage, color, price)
         {
             this.feature = feature;
@@ -27,7 +32,7 @@ namespace Inheritance.ProblemDomain
 
         public override string ToString()
         {
-            return "placeholder";
+            return $"Dishwasher Information\nItem Number: {ItemNumber}\nBrand: {Brand}\nQuantity: {Quantity}\nWattage: {Wattage}\nColor: {Color}\nPrice: {Price}\nFeature: {Feature}\nSoundRating: {SoundRating}\n";
         }
     }
 }

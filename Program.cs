@@ -37,8 +37,10 @@ namespace Inheritance
                         break;
                     case "4":
                         //ProduceRandomApplianceList();
+                        ProduceRandomApplianceList(appliances);
                         break;
                     case "5":
+                        //SaveListToFile();
                         exit = true;
                         break;
 
@@ -110,13 +112,26 @@ namespace Inheritance
 
                     //appliances.Add(new Microwave(long.Parse(itemNum), brand, quantity, wattage, color, price, capacity, roomType));
                 }
-                else if (itemNum[0] == '4' && itemNum[0] == '5')
+                else if (itemNum[0] == '4' || itemNum[0] == '5')
                 {
                     string feature = fields[6];
                     string soundRating = fields[7];
 
                     appliances.Add(new Dishwasher(long.Parse(itemNum), brand, quantity, wattage, color, price, feature, soundRating));
                 }
+            }
+        }
+
+        public static void ProduceRandomApplianceList(List<Appliance> appliance)
+        {
+            Random randomNum = new Random();
+            List<Appliance> shuffledAppliance = new List<Appliance>(appliance.OrderBy(x => randomNum.Next()).ToList());  //orders list by a random number to produce a random order of appliances everytime method gets called
+            Console.WriteLine("Enter number of appliances:");
+            int numAppliance = int.Parse(Console.ReadLine());
+            Console.WriteLine("Random Appliances:\n");
+            for(int i = 0; i < numAppliance; i++)
+            {
+                Console.WriteLine(shuffledAppliance[i].ToString());
             }
         }
     }
