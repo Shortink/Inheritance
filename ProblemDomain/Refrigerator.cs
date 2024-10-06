@@ -29,7 +29,7 @@ namespace Inheritance.ProblemDomain
         }
         public override string FileForFormat()
         {
-            return $"{ItemNumber},{Brand},{Quantity},{Wattage},{Color},{Price},{NumOfDoors},{Height},{Width}";
+            return $"{ItemNumber};{Brand};{Quantity};{Wattage};{Color};{Price};{NumOfDoors};{Height};{Width}";
         }
         public override string ToString()
         {

@@ -36,11 +36,10 @@ namespace Inheritance
                         //DisplayApplianceByType();
                         break;
                     case "4":
-                        //ProduceRandomApplianceList();
                         ProduceRandomApplianceList(appliances);
                         break;
                     case "5":
-                        //SaveListToFile();
+                        SaveListToFile(appliances);
                         exit = true;
                         break;
 
@@ -133,6 +132,17 @@ namespace Inheritance
             {
                 Console.WriteLine(shuffledAppliance[i].ToString());
             }
+        }
+
+        public static void SaveListToFile(List<Appliance> appliance)  //deletes existing file and writes new list to file
+        {
+            string path = "..\\..\\res\\appliancestest.txt";
+            File.Delete(path);
+            foreach (Appliance item in appliance)
+            {
+                File.AppendAllText(path, $"{item.FileForFormat()}\n");
+            }
+
         }
     }
 }
