@@ -48,7 +48,9 @@
   <ItemGroup>
     <Compile Include="Appliance.cs" />
     <Compile Include="ProblemDomain\Dishwasher.cs" />
+    <Compile Include="ProblemDomain\Microwave.cs" />
     <Compile Include="ProblemDomain\Refrigerator.cs" />
+    <Compile Include="ProblemDomain\Vacuum.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

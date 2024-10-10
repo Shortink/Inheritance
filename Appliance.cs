@@ -50,7 +50,7 @@ namespace Inheritance
 
         public void Checkout()
         {
-            Console.WriteLine($"Appliance {ItemNumber} has been checked out");
+            Console.WriteLine($"Appliance {ItemNumber} has been checked out\n");
         }
 
         public abstract string FileForFormat();
