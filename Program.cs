@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Raphael,Elvis,Aiana 2024-10-10
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,9 +15,7 @@ namespace Inheritance
         static List<Appliance> appliances = new List<Appliance>();
         static void Main(string[] args)
         {
-
             LoadFile();
-
             bool exit = false;
 
             while (!exit)
@@ -48,6 +47,8 @@ namespace Inheritance
             }
         }
 
+        //takes appliance number and checks if appliance is available. If it is, it decrements the quantity and checks out the appliance.
+        //If the appliance is not available or theres no appliance with the number entered, it prints a message saying it is not available.
         public static void PurchaseAppliance()
         {
             Console.WriteLine("Enter the item number of an appliance:");
@@ -82,6 +83,7 @@ namespace Inheritance
             }
         }
 
+        //loops through the list of appliances and checks if the brand entered by the user matches the brand of any appliance in the list.
         public static void FindAppliance()
         {
             Console.WriteLine("Enter brand to search for:");
@@ -94,12 +96,14 @@ namespace Inheritance
             {
                 if (appliance.Brand.ToLower() == userBrandInput)
                 {
-
                     Console.WriteLine(appliance.ToString());
                     Console.WriteLine("\n");
                 }
             }
         }
+
+        //displays appliances based on user input and matching features.
+        //depending on selected appliance type, it asks for additional input to filter the appliances.
 
         public static void DisplayApplianceByType()
         {
@@ -209,6 +213,9 @@ namespace Inheritance
 
         }
 
+        //loads data from file and creates appliance objects based on the data and populates appliance list with created objects.
+        //each line in the file represents an appliance and contains all its attributes seperated by semicolons ";" and the attributes are assigned to the corresponding variables.
+        //Appliances are categorized based on the first digit of the item number, for example 1 for refrigerators, 2 for vacuums, 3 for microwaves, 4 and 5 for dishwashers.
         public static void LoadFile()
         {
             string path = "..\\..\\res\\appliances.txt";
@@ -306,9 +313,10 @@ namespace Inheritance
             }
         }
 
-        public static void SaveListToFile(List<Appliance> appliance)  //deletes existing file and writes new list to file
+        public static void SaveListToFile(List<Appliance> appliance)  //deletes existing file and writes new list to file.
         {
-            string path = "..\\..\\res\\appliancestest.txt";
+            //string path = "..\\..\\res\\appliancest.txt";
+            string path = "..\\..\\res\\appliances.txt";
             File.Delete(path);
             foreach (Appliance item in appliance)
             {

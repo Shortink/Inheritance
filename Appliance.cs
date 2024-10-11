@@ -1,4 +1,7 @@
-﻿using System;
+﻿//Raphael,Elvis,Aiana 2024-10-10
+//Parent class for dishwasher, microwave, refrigerator, and vacum classes.
+//contains Abstract filefor format method to format data to be written to file in all child classes.
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Raphael,Elvis,Aiana 2024-10-10
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,6 +26,7 @@ namespace Inheritance.ProblemDomain
             this.Voltage = voltage;
         }
 
+        // This method is used to correctly format the data to be written to file.
         public override string FileForFormat()
         {
             return $"{ItemNumber};{Brand};{Quantity};{Wattage};{Color};{Price};{Grade};{Voltage};";
