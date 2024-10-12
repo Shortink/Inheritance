@@ -34,7 +34,7 @@ namespace Inheritance.ProblemDomain
 
         public override string ToString()
         {
-            return $"Item Number: {ItemNumber}\nBrand: {Brand}\nQuantity: {Quantity}\nWattage: {Wattage}\nPrice: {Price}\nGrade: {Grade}\nVoltage: {Voltage}";
+            return $"Item Number: {ItemNumber}\nBrand: {Brand}\nQuantity: {Quantity}\nWattage: {Wattage}\nColor: {Color}\nPrice: {Price}\nGrade: {Grade}\nVoltage: {Voltage}";
         }
 
 
